@@ -1,0 +1,31 @@
+{
+  "name": "wyvern",
+  "version": "1.0.0",
+  "description": "Chromium based web browser built with Electron",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpdoshi/Wyvern.git"
+  },
+  "keywords": [
+    "wyvern",
+    "browser",
+    "tor",
+    "chromium",
+    "electron",
+    "ad-block"
+  ],
+  "author": "jpdoshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpdoshi/Wyvern/issues"
+  },
+  "homepage": "https://github.com/jpdoshi/Wyvern#readme",
+  "devDependencies": {
+    "electron": "^30.0.9"
+  }
+}
