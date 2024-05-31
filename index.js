@@ -7,6 +7,7 @@ const path = require("node:path");
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
+    icon: "public/icon.png",
     width: 1280,
     height: 720,
     webPreferences: {
