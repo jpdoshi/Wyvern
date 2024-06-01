@@ -10,13 +10,16 @@ const createWindow = () => {
     icon: "./public/icon.png",
     width: 1280,
     height: 720,
+    minWidth: 360,
+    minHeight: 120,
+    frame: false,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
   });
 
   // and load the index.html of the app.
-  mainWindow.loadFile("index.html");
+  mainWindow.loadFile("./public/index.html");
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
