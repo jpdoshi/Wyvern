@@ -2,12 +2,12 @@
 
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require("electron");
-const path = require("node:path");
+const path = require("path");
 
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    icon: "public/icon.png",
+    icon: "./public/icon.png",
     width: 1280,
     height: 720,
     webPreferences: {
