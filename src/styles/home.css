@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Inter Variable';
+  src: url('../../public/Inter-Variable.ttf');
+}
+
+body {
+  font-family: 'Inter Variable';
+}
+
+.container {
+  width: 100vw;
+  max-width: 1200px;
+  margin: 25vh auto;
+}
+
+.container img {
+  height: 160px;
+  display: block;
+  margin: auto;
+}
+
+.search-field {
+  width: 100%;
+  max-width: 520px;
+  background-color: #f5f5f5;
+  margin: 2.5rem auto;
+  display: flex;
+  border-radius: 12px;
+}
+
+#search-bar {
+  background-color: transparent;
+  color: #424242;
+  border: none;
+  padding: 16px;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  font-size: 18px;
+  outline: none;
+}
+
+#search-btn {
+  border: none;
+  border-radius: 12px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  font-size: 18px;
+  color: white;
+  background-color: #e53935;
+  padding: 16px 20px;
+  cursor: pointer;
+}
+
+.version-no {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 12px;
+  font-size: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #161616;
+  }
+
+  .search-field {
+    background-color: #212121;
+  }
+
+  #search-bar {
+    color: #eee;
+  }
+
+  #search-btn {
+    color: #212121;
+    background-color: #eee;
+  }
+
+  .version-no {
+    color: #eee;
+  }
+}
