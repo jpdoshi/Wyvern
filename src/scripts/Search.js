@@ -12,6 +12,7 @@ searchBtn.addEventListener("click", () => {
   const query = searchBar.value;
   if (query.startsWith("http://") || query.startsWith("https://")) {
     // webView.src = query;
+    window.location = query;
   } else {
     window.location = `https://google.com/search?q=${query}`;
   }
