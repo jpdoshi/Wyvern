@@ -8,16 +8,26 @@
 </head>
 <body>
   <div class="title-bar">
-    <div class="window-action">
-      <div class="action-btn" id="close">
-        <div class="btn-bar" style="width: 10px; transform: translate(3.6px, 8px) rotate(45deg);"></div>
-        <div class="btn-bar" style="width: 10px; transform: translate(3.6px, 6.6px) rotate(-45deg);"></div>
+    <div id="sidebar-btn">
+      <div class="btn-line"></div>
+    </div>
+    <div class="action-fields">
+      <div class="url-bar">
+        <p id="url-text">Wyvern</p>
       </div>
+    </div>
+    <div class="window-action">
       <div class="action-btn" id="minimize">
         <div class="btn-bar" style="width: 8px; transform: translate(5px, 8px);"></div>
       </div>
+      <div class="action-btn" id="maximize">
+        <div class="btn-box" style="height: 10px; width: 10px; transform: translate(4.2px, 4px);"></div>
+      </div>
+      <div class="action-btn" id="close">
+        <div class="btn-bar" style="width: 10px; transform: translate(4px, 8px) rotate(45deg);"></div>
+        <div class="btn-bar" style="width: 10px; transform: translate(4px, 6.6px) rotate(-45deg);"></div>
+      </div>
     </div>
-    <p id="url">https://google.com</p>
   </div>
 </body>
 <script src="../src/scripts/WindowActions.js"></script>
