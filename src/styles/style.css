@@ -20,10 +20,13 @@ body {
   width: 100% !important;
   display: flex;
   align-items: center;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
 }
 
 .title-bar .action-fields {
   margin-inline: auto !important;
+  -webkit-app-region: no-drag;
 }
 
 .url-bar {
@@ -39,6 +42,7 @@ body {
 .window-action {
   margin-inline: 8px;
   display: flex;
+  -webkit-app-region: no-drag;
 }
 
 .action-btn {
@@ -80,6 +84,7 @@ body {
   border: 2px solid #666;
   border-radius: 4px;
   margin-inline: 12px;
+  -webkit-app-region: no-drag;
 }
 
 #sidebar-btn .btn-line {
