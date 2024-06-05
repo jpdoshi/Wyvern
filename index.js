@@ -17,10 +17,19 @@ const createWindow = () => {
       nodeIntegration: true,
       contextIsolation: false,
       webviewTag: true,
+      devTools: false,
     },
   });
 
-  mainWindow.loadFile("./public/index.html");
+  mainWindow.loadFile("./src/markup/index.html");
+
+  mainWindow.on("enter-full-screen", () => {
+    mainWindow.webContents.send("enterFullScreen");
+  });
+
+  mainWindow.on("leave-full-screen", () => {
+    mainWindow.webContents.send("exitFullScreen");
+  });
 
   ipc.on("closeApp", () => {
     mainWindow.close();

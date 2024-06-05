@@ -5,11 +5,18 @@ searchBar.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
     searchBtn.click();
+
+    searchBar.readonly = true;
+    searchBtn.disabled = true;
   }
 });
 
 searchBtn.addEventListener("click", () => {
   const query = searchBar.value;
+
+  searchBar.readonly = true;
+  searchBtn.disabled = true;
+
   if (query.startsWith("http://") || query.startsWith("https://")) {
     // webView.src = query;
     window.location = query;

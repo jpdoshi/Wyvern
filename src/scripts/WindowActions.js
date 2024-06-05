@@ -3,6 +3,11 @@ const path = require("path");
 
 const ipc = ipcRenderer;
 
+document.getElementsByClassName("webView")[0].src = path.join(
+  __dirname,
+  "/home.html"
+);
+
 const closeApp = () => {
   ipc.send("closeApp");
 };
@@ -15,4 +20,22 @@ const maximizeApp = () => {
   ipc.send("maximizeApp");
 };
 
-document.getElementById("webView").src = path.join(__dirname, "/home.html");
+ipc.on("enterFullScreen", () => {
+  const titleBar = document.getElementsByClassName("title-bar")[0];
+  const webViews = document.getElementsByClassName("webView");
+
+  titleBar.style.transform = "scaleY(0)";
+  for (let wv of webViews) {
+    wv.style.paddingTop = "0px";
+  }
+});
+
+ipc.on("exitFullScreen", () => {
+  const titleBar = document.getElementsByClassName("title-bar")[0];
+  const webViews = document.getElementsByClassName("webView");
+
+  titleBar.style.transform = "scaleY(1)";
+  for (let wv of webViews) {
+    wv.style.paddingTop = "32px";
+  }
+});

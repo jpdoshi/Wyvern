@@ -52,14 +52,6 @@ body {
   cursor: pointer;
 }
 
-.version-no {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 12px;
-  font-size: 14px;
-}
-
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #161616;
@@ -76,9 +68,5 @@ body {
   #search-btn {
     color: #212121;
     background-color: #eee;
-  }
-
-  .version-no {
-    color: #eee;
   }
 }
