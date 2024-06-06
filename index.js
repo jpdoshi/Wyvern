@@ -10,8 +10,8 @@ const createWindow = () => {
     height: 720,
     minWidth: 360,
     minHeight: 32,
-    frame: false,
-    titleBarOverlay: true,
+    titleBarStyle: "hidden",
+    titleBarOverlay: false,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
       nodeIntegration: true,
