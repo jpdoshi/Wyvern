@@ -12,18 +12,19 @@
       <div class="btn-line"></div>
     </div>
     <div class="action-fields">
-      <div class="page-btns">
-        <div id="back">
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-        <div id="forward">
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
+      <div style="margin-right: 12px;">
+        <button onclick="navigateBack()">
+          <img src="../../public/back.png" />
+        </button>
+        <button onclick="navigateForward()">
+          <img src="../../public/back.png" style="transform: translate(1px, 2px) rotate(180deg);" />
+        </button>
+        <button onclick="reloadPage()">
+          <img src="../../public/reload.png" />
+        </button>
       </div>
       <div class="url-bar">
-        <p id="url-text">https://google.com</p>
+        <p id="url-text">Wyvern Home</p>
       </div>
     </div>
     <div class="window-action">
