@@ -8,7 +8,8 @@
 </head>
 <body>
   <div class="title-bar">
-    <div id="sidebar-btn">
+    <img id="app-icon" src="../../public/icon.png" height="18px" />
+    <div id="sidebar-btn" onclick="handleSidebar()">
       <div class="btn-line"></div>
     </div>
     <div class="action-fields">
@@ -24,10 +25,16 @@
         </button>
       </div>
       <div class="url-bar">
-        <p id="url-text">Wyvern Home</p>
+        <p id="url-text">Welcome - Wyvern</p>
       </div>
+      <button id="page-options-btn">
+        <img src="../../public/options.png" />
+      </button>
     </div>
     <div class="window-action">
+      <div class="action-btn options-dropdown">
+        <button id="app-options-btn"><img src="../../public/back.png" /></button>
+      </div>
       <div class="action-btn" onclick="minimizeApp()">
         <div class="btn-bar" style="width: 8px; transform: translate(5px, 8px);"></div>
       </div>
@@ -40,7 +47,12 @@
       </div>
     </div>
   </div>
-  <webview class="webView"></webview>
+  <div id="browser-view">
+    <div id="sidebar"></div>
+    <div id="browser-tabs">
+      <webview class="webView"></webview>
+    </div>
+  </div>
 </body>
 <script src="../scripts/WindowActions.js"></script>
 </html>

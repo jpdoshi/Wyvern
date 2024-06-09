@@ -50,22 +50,31 @@ const reloadPage = () => {
   document.getElementsByClassName("webView")[0].reload();
 };
 
+const handleSidebar = () => {
+  const sidebar = document.getElementById("sidebar");
+
+  if (sidebar.style.width === "0px") {
+    sidebar.style.width = "200px";
+  } else {
+    sidebar.style.width = "0px";
+  }
+};
+
 ipc.on("enterFullScreen", () => {
   const titleBar = document.getElementsByClassName("title-bar")[0];
-  const webViews = document.getElementsByClassName("webView");
+  const browserView = document.getElementById("browser-view");
+  const sidebar = document.getElementById("sidebar");
 
   titleBar.style.transform = "scaleY(0)";
-  for (let wv of webViews) {
-    wv.style.paddingTop = "0px";
-  }
+  browserView.style.paddingTop = "0px";
+
+  sidebar.style.width = "0px";
 });
 
 ipc.on("exitFullScreen", () => {
   const titleBar = document.getElementsByClassName("title-bar")[0];
-  const webViews = document.getElementsByClassName("webView");
+  const browserView = document.getElementById("browser-view");
 
   titleBar.style.transform = "scaleY(1)";
-  for (let wv of webViews) {
-    wv.style.paddingTop = "32px";
-  }
+  browserView.style.paddingTop = "32px";
 });

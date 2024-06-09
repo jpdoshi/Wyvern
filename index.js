@@ -8,7 +8,7 @@ const createWindow = () => {
     icon: "./public/icon.png",
     width: 1280,
     height: 720,
-    minWidth: 360,
+    minWidth: 540,
     minHeight: 32,
     titleBarStyle: "hidden",
     titleBarOverlay: false,
