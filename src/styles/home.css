@@ -46,6 +46,11 @@ body {
   white-space: nowrap;
 }
 
+#search-bar::placeholder {
+  color: #424242;
+  opacity: 0.5;
+}
+
 #search-bar::selection {
   color: #212121;
   background-color: rgba(229, 57, 53, 0.5);
@@ -74,7 +79,12 @@ body {
   }
 
   #search-bar {
-    color: #848484;
+    color: #f5f5f5;
+  }
+
+  #search-bar::placeholder {
+    color: #f5f5f5;
+    opacity: 0.5;
   }
 
   #search-bar::selection {
@@ -82,7 +92,7 @@ body {
   }
 
   .logo {
-    filter: grayscale(1) opacity(0.2);
+    filter: grayscale(1) brightness(2.5);
   }
 
   .search-field {
@@ -90,7 +100,7 @@ body {
   }
 
   #search-btn {
-    color: #e53935;
-    background-color: transparent;
+    color: #212121;
+    background-color: #f5f5f5;
   }
 }
